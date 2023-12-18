@@ -1,0 +1,4 @@
+docker build -t app -f Dockerfile .
+docker run -v ./users.xml:/etc/clickhouse-server/ -d -p 8080:8080 --name cont app
+docker ps -a
+docker logs cont -f
